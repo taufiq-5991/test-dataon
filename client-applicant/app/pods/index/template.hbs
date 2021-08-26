@@ -1,0 +1,133 @@
+<h2>Drop your CV here</h2>
+<form class="form" {{action "submitData" on='submit'}} method="post">
+<table>
+<tbody>
+	<tr>
+		<th>Personal Data</th>
+		<td>
+			<div class="wrapper">
+				<label for="name">Name</label><span class="asterisk">*</span><br>
+				<input type="text" name="name" id="name" class="input-group input-group-short"
+				{{action 'updatefield' 'name' on='change'}}>
+			</div>
+			<div class="wrapper">
+				<label for="dob">Date of Birth</label><span class="asterisk">*</span><br>
+				<input type="date" name="dob" id="dob" class="input-group input-group-short"
+				{{action 'updatefield' 'dob' on='change'}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="address">Address</label><span class="asterisk">*</span><br>
+				<input type="text" name="address" id="address" class="input-group input-group-long"
+				{{action 'updatefield' 'address' on='change'}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="email">E-mail</label><span class="asterisk">*</span><br>
+				<input type="email" name="email" id="email" class="input-group input-group-short"
+				{{action 'updatefield' 'email' on='change'}}>
+			</div>
+			<div class="wrapper">
+				<label for="phone">Phone</label><span class="asterisk">*</span><br>
+				<input type="number" name="phone" id="phone" class="input-group input-group-short"
+				{{action 'updatefield' 'phone' on='change'}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="skill">Skills</label><span class="asterisk">*</span><br>
+				<textarea name="skill" id="skill" class="input-group input-group-long"
+				{{action 'updatefield' 'skill' on='change'}}></textarea>
+			</div><br>
+			<div class="wrapper">
+				<label for="position">Desired Position</label><span class="asterisk">*</span><br>
+				<select required class="input-group input-group-long" name="position" id="position" value="target.value"
+				{{action 'updatefield' 'position' on='change'}}>
+					<option hidden disabled selected value> </option>
+					{{#each listpositions as |listposition|}}
+						<option value={{listposition.id}}> {{listposition.position_name}} </option>
+					{{else}}
+						<option disabled value> No data available </option>
+					{{/each}}
+				</select>
+			</div><br>
+			<div style="width: 49em"></div>
+			<br>
+		</td>
+	</tr>
+	<tr>
+		<th>Education Data</th>
+		<td>
+			<div class="wrapper">
+				<label for="school">School Name</label><span class="asterisk">*</span><br>
+				<input type="text" name="school" id="school" class="input-group input-group-short"
+				{{action 'updatefield' 'school' on='change'}}>
+			</div>
+			<div class="wrapper">
+				<label for="degree">Degree</label><span class="asterisk">*</span><br>
+				<select required class="input-group input-group-short" name="degree" id="degree" value="target.value"
+				{{action 'updatefield' 'degree' on='change'}}>
+					<option hidden disabled selected value> </option>
+					{{#each listdegrees as |listdegree|}}
+						<option value={{listdegree.id}}> {{listdegree.degree_name}} </option>
+					{{else}}
+						<option disabled value> No data available </option>
+					{{/each}}
+				</select>
+			</div><br>
+			<div class="wrapper">
+				<label for="schoolstart">Start Date</label><span class="asterisk">*</span><br>
+				<input type="date" name="schoolstart" id="schoolstart" class="input-group input-group-short"
+				{{action 'updatefield' 'schoolstart' on='change'}}>
+			</div>
+			<div class="wrapper">
+				<label for="schoolend">End Date</label><span class="asterisk">*</span><br>
+				<input type="date" name="schoolend" id="schoolend" class="input-group input-group-short"
+				{{action 'updatefield' 'schoolend' on='change'}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="major">Major</label><span class="asterisk">*</span><br>
+				<input type="text" name="major" id="major" class="input-group input-group-short"
+				{{action 'updatefield' 'major' on='change'}}>
+			</div>
+			<div class="wrapper">
+				<label for="grade">Grade</label><span class="asterisk">*</span><br>
+				<input type="number" name="grade" id="grade" class="input-group input-group-short"
+				{{action 'updatefield' 'grade' on='change'}}>
+			</div><br>
+			<div style="width: 49em"></div>
+			<br>
+		</td>
+	</tr>
+	<tr>
+		<th>Work Experience</th>
+		<td>
+			<div class="wrapper">
+				<label for="companyname">Company Name</label><span class="asterisk">*</span><br>
+				<input type="text" name="companyname" id="companyname" class="input-group input-group-short"
+				{{action 'updatefield' 'companyname' on='change'}}>
+			</div>
+			<div class="wrapper">
+				<label for="position">Position</label><span class="asterisk">*</span><br>
+				<input type="text" name="oldposition" id="oldposition" class="input-group input-group-short"
+				{{action 'updatefield' 'oldposition' on='change'}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="companystart">Start Date</label><span class="asterisk">*</span><br>
+				<input type="date" name="companystart" id="companystart" class="input-group input-group-short"
+				{{action 'updatefield' 'companystart' on='change'}}>
+			</div>
+			<div class="wrapper">
+				<label for="companyend">End Date</label><span class="asterisk">*</span><br>
+				<input type="date" name="companyend" id="companyend" class="input-group input-group-short"
+				{{action 'updatefield' 'companyend' on='change'}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="summary">Summary</label><span class="asterisk">*</span><br>
+				<textarea name="summary" id="summary" class="input-group input-group-long"
+				{{action 'updatefield' 'summary' on='change'}}></textarea>
+			</div><br>
+			<div style="float: right;">
+				<button href="#" class="send-btn">Confirm</button>
+			</div>
+		</td>
+	</tr>
+</tbody>
+</table>
+</form>

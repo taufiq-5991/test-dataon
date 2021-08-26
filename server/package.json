@@ -1,0 +1,27 @@
+{
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sequelize",
+    "rest",
+    "api",
+    "postgresql",
+    "mysql2",
+    "mariadb"
+  ],
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^7.17.1",
+    "mysql2": "2.3.0",
+    "mariadb": "2.5.4",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3",
+    "nodemailer": "6.6.3"
+  }
+}

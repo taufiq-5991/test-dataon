@@ -1,0 +1,143 @@
+body {
+	font-family: 'Arial';
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	margin: auto;
+	width: 80%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+.index-table {
+  border: 1px solid #dddddd;
+}
+.index-th {
+  background-color: #cccccc;
+}
+
+.index-tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+.input-group {
+	height: 2.5em;
+	margin-bottom: 1.8em;
+	margin-right: 1.7em;
+	padding-left: 2.5em;
+	border: 0.1em solid #ccc;
+	border-radius: 0.3em;
+}
+.input-group-long {
+	width: 40em;
+}
+.input-group-short {
+	width: 15em;
+}
+.input-group-total {
+	background-color: #bfbfbf;
+	color: #474747;
+}
+
+
+
+.input-group:hover {
+	border-color: #3399FF;
+	box-shadow: 0em 0em 0.2em #3399FF;
+}
+
+.input-group:active {
+	border-color: #006699;
+}
+
+.wrapper {
+	position: relative;
+	display: inline-block;
+}
+
+.wrapper .fa {
+	position: absolute;
+	padding: 0.4em;
+	font-size: 1.2em;
+	color: #ccc;
+	pointer-events: none;
+}
+
+.form {
+	margin: 1em;
+}
+
+.label {
+	padding: 0.2em;
+}
+
+.textarea {
+	width: 45em;
+	max-width: 45em;
+	height: 10em;
+	display: block;
+	padding: 1.5em;
+	border: 0.1em solid #ccc;
+	border-radius: 0.3em;
+	font-family: 'Arial';
+	background-color: #ffffea;
+}
+
+.textarea:hover {
+	border-color: #3399FF;
+	box-shadow: 0em 0em 0.2em #3399FF;
+}
+
+.textarea:active {
+	border-color: #006699;
+}
+
+.form h2 {
+	font-size: 2em;
+	font-weight: bold;
+	color: 	#666666;
+}
+
+.send-btn {
+	width: 8em;
+	max-width: 8em;
+	padding: 0.5em;
+	font-size: 1em;
+	margin-top: 2em;
+	background-color: #72a650;
+	color: white;
+	border: none;
+	text-align: center;
+	border-radius: 0.3em;
+}
+.disabled-btn {
+	padding: 0.5em;
+	font-size: 1em;
+	margin-top: 2em;
+	border: none;
+	text-align: center;
+	border-radius: 0.3em;
+	color: #333333;
+}
+
+.asterisk {
+	color: red;
+}
+
+.totalnett {
+	width: 20em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.compo {	
+	margin-top: : 15em;
+	margin-bottom: : 35em;
+}

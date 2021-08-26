@@ -1,0 +1,23 @@
+<h2>CV Admin Module</h2>
+<table>
+  <tr class="index-table index-th">
+    <th>Name</th>
+    <th>E-mail</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Date of Birth</th>
+    <th>Status</th>
+    <th>Applied Position</th>
+  </tr>
+  {{#each applicants as |applicant|}}
+	  <tr href="/applicant/{{applicant.id}}" class="index-table index-tr">
+	    <td><a href="/applicant/{{applicant.id}}">{{applicant.fullname}}</a></td>  
+	    <td>{{applicant.email}}</td>
+	    <td>{{applicant.phone}}</td>
+	    <td>{{applicant.address}}</td>
+	    <td>{{applicant.birth_date}}</td>
+	    <td>{{applicant.status}}</td>
+	    <td>{{applicant.position_name}}</td>
+	  </tr>
+  {{/each}}
+</table>

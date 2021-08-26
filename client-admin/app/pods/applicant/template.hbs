@@ -1,0 +1,122 @@
+<h2>CV Application Details</h2>
+<table>
+<tbody>
+	<tr>
+		<th>Personal Data</th>
+		<td>
+			<div class="wrapper">
+				<label for="name">Name</label><span class="asterisk">*</span><br>
+				<input type="text" name="name" id="name" class="input-group input-group-short" 
+				disabled value={{applicantdata.fullname}}>
+			</div>
+			<div class="wrapper">
+				<label for="dob">Date of Birth</label><span class="asterisk">*</span><br>
+				<input type="date" name="dob" id="dob" class="input-group input-group-short"
+				disabled value={{applicantdata.birth_date}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="address">Address</label><span class="asterisk">*</span><br>
+				<input type="text" name="address" id="address" class="input-group input-group-long"
+				disabled value={{applicantdata.address}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="email">E-mail</label><span class="asterisk">*</span><br>
+				<input type="email" name="email" id="email" class="input-group input-group-short"
+				disabled value={{applicantdata.email}}>
+			</div>
+			<div class="wrapper">
+				<label for="phone">Phone</label><span class="asterisk">*</span><br>
+				<input type="number" name="phone" id="phone" class="input-group input-group-short"
+				disabled value={{applicantdata.phone}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="skill">Skills</label><span class="asterisk">*</span><br>
+				<textarea name="skill" id="skill" class="input-group input-group-long"
+				disabled value={{applicantdata.skills}}></textarea>
+			</div><br>
+			<div class="wrapper">
+				<label for="position">Desired Position</label><span class="asterisk">*</span><br>
+				<input name="position" id="position" class="input-group input-group-long"
+				disabled value={{applicantdata.position_name}}>
+			</div><br>
+			<div style="width: 49em"></div>
+			<br>
+		</td>
+	</tr>
+	<tr>
+		<th>Education Data</th>
+		<td>
+			<div class="wrapper">
+				<label for="school">School Name</label><span class="asterisk">*</span><br>
+				<input type="text" name="school" id="school" class="input-group input-group-short"
+				disabled value={{applicanteducation.school_name}}>
+			</div>
+			<div class="wrapper">
+				<label for="degree">Degree</label><span class="asterisk">*</span><br>
+				<input type="text" name="degree" id="degree" class="input-group input-group-short"
+				disabled value={{applicanteducation.degree_name}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="schoolstart">Start Date</label><span class="asterisk">*</span><br>
+				<input type="date" name="schoolstart" id="schoolstart" class="input-group input-group-short"
+				disabled value={{applicanteducation.start_date}}>
+			</div>
+			<div class="wrapper">
+				<label for="schoolend">End Date</label><span class="asterisk">*</span><br>
+				<input type="date" name="schoolend" id="schoolend" class="input-group input-group-short"
+				disabled value={{applicanteducation.end_date}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="major">Major</label><span class="asterisk">*</span><br>
+				<input type="text" name="major" id="major" class="input-group input-group-short"
+				disabled value={{applicanteducation.major}}>
+			</div>
+			<div class="wrapper">
+				<label for="grade">Grade</label><span class="asterisk">*</span><br>
+				<input type="number" name="grade" id="grade" class="input-group input-group-short"
+				disabled value={{applicanteducation.grade}}>
+			</div><br>
+			<div style="width: 49em"></div>
+			<br>
+		</td>
+	</tr>
+	<tr>
+		<th>Work Experience</th>
+		<td>
+			<div class="wrapper">
+				<label for="companyname">Company Name</label><span class="asterisk">*</span><br>
+				<input type="text" name="companyname" id="companyname" class="input-group input-group-short"
+				disabled value={{applicantexperience.company_name}}>
+			</div>
+			<div class="wrapper">
+				<label for="position">Position</label><span class="asterisk">*</span><br>
+				<input type="text" name="oldposition" id="oldposition" class="input-group input-group-short"
+				disabled value={{applicantexperience.position}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="companystart">Start Date</label><span class="asterisk">*</span><br>
+				<input type="date" name="companystart" id="companystart" class="input-group input-group-short"
+				disabled value={{applicantexperience.start_date}}>
+			</div>
+			<div class="wrapper">
+				<label for="companyend">End Date</label><span class="asterisk">*</span><br>
+				<input type="date" name="companyend" id="companyend" class="input-group input-group-short"
+				disabled value={{applicantexperience.end_date}}>
+			</div><br>
+			<div class="wrapper">
+				<label for="summary">Summary</label><span class="asterisk">*</span><br>
+				<textarea name="summary" id="summary" class="input-group input-group-long"
+				disabled value={{applicantexperience.summary}}></textarea>
+			</div><br>
+			<div style="float: right;">
+				{{#if (eq2 applicantdata.status 'PENDING')}}
+				<button href="#" class="send-btn" {{action 'updateApplicant' applicantdata.id applicantdata.email 'REJECTED' on='click'}}>Reject</button>
+				<button href="#" class="send-btn" {{action 'updateApplicant' applicantdata.id applicantdata.email 'ACCEPTED' on='click'}}>Accept</button>
+				{{else}}
+				<button href="#" class="disabled-btn">This CV application has been {{applicantdata.status}}</button>
+				{{/if}}
+			</div>
+		</td>
+	</tr>
+</tbody>
+</table>
