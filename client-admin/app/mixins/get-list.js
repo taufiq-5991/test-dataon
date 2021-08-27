@@ -15,7 +15,7 @@ export default Mixin.create({
         axios({
             method: "GET",
             data:{},
-            url: 'http://localhost:8080/api/applicantdatas'
+            url: 'https://desolate-cove-53213.herokuapp.com/api/applicantdatas'
         })
         .then(function(response){
             controller.set('applicants', response.data);
@@ -32,7 +32,7 @@ export default Mixin.create({
         axios({
             method: "GET",
             data:{},
-            url: 'http://localhost:8080/api/applicantdatas/'+param
+            url: 'https://desolate-cove-53213.herokuapp.com/api/applicantdatas/'+param
         })
         .then(function(response){
             controller.set('applicantdata', response.data);
@@ -48,7 +48,7 @@ export default Mixin.create({
         axios({
             method: "GET",
             data:{},
-            url: 'http://localhost:8080/api/applicanteducations/applicant/'+param
+            url: 'https://desolate-cove-53213.herokuapp.com/api/applicanteducations/applicant/'+param
         })
         .then(function(response){
             controller.set('applicanteducation', response.data);
@@ -64,7 +64,7 @@ export default Mixin.create({
         axios({
             method: "GET",
             data:{},
-            url: 'http://localhost:8080/api/applicantexperiences/applicant/'+param
+            url: 'https://desolate-cove-53213.herokuapp.com/api/applicantexperiences/applicant/'+param
         })
         .then(function(response){
             controller.set('applicantexperience', response.data);
@@ -86,7 +86,7 @@ export default Mixin.create({
                     email: email,
                     status: status
                 },
-                url: 'http://localhost:8080/api/applicantdatas/'+id
+                url: 'https://desolate-cove-53213.herokuapp.com/api/applicantdatas/'+id
             })
             .then(function(response){
                 console.log('Update applicant success!');
