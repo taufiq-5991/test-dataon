@@ -6,9 +6,9 @@ This application is for job applicants to drop their CVs, also features an admin
 - Back-End: Node.js
 - Database: MariaDB
 
-## Instruction
+## Instruction to deploy locally
 Front-end
-- Execute "npm install" and "bower install" on client-applicant folder
+- Execute "npm install" on client-applicant folder
 - To run & connect to local back-end, execute "ember s --proxy http://localhost:8080"
 
 Back-end

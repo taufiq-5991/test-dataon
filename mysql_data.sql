@@ -22,7 +22,7 @@ CREATE TABLE applicant_educations (
     start_date date,
     end_date date,
     major text,
-    grade numeric,
+    grade decimal(10,2),
     applicant_id integer,
     degree_id integer,
 	PRIMARY KEY (id)
@@ -60,8 +60,7 @@ CREATE TABLE list_positions (
 
 INSERT INTO applicant_data VALUES (1, now(), now(), 'Budi Gunardi', 'budi_gunawan@hotmail.com', '08124235234', 'BSD', '1990-10-02', 'PENDING', 'Microsoft Office, HRIS, Accounting, Psychology', 6);
 
-INSERT INTO applicant_educations VALUES (1, now(), now(), 'SMA 3 Curug', '2009-06-10', '2013-07-23', 'IPS', 3.50, 1, 1);
-INSERT INTO applicant_educations VALUES (2, now(), now(), 'Universitas Pelita Harapan', '2009-06-10', '2013-07-23', 'Psikologi', 3.00, 1, 3);
+INSERT INTO applicant_educations VALUES (1, now(), now(), 'Universitas Pelita Harapan', '2009-06-10', '2013-07-23', 'Psikologi', 3.00, 1, 3);
 
 INSERT INTO applicant_experiences VALUES (1, now(), now(), 'PT. Anabatic', 'Managing new applicants, providing administrative functions and psychological support to current workers.', 'HR Admin', '2009-06-10', '2013-07-23', 1);
 

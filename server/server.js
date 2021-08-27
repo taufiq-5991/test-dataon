@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:4200"
+  origin: ['http://localhost:4200', 'https://test-dataon-admin-frontend.web.app', 'https://test-dataon-applicant-frontend.web.app']
 };
 
 app.use(cors(corsOptions));

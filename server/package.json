@@ -11,7 +11,8 @@
     "api",
     "postgresql",
     "mysql2",
-    "mariadb"
+    "mariadb",
+    "heroku"
   ],
   "dependencies": {
     "body-parser": "^1.19.0",

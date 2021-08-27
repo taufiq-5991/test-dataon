@@ -13,7 +13,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     grade: {
-      type: Sequelize.DECIMAL
+      type: Sequelize.DECIMAL(10, 2)
     },
     applicant_id: {
       type: Sequelize.INTEGER
