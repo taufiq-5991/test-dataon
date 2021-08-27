@@ -15,7 +15,7 @@ export default Mixin.create({
         axios({
             method: "GET",
             data:{},
-            url: 'http://localhost:8080/api/listdegrees'
+            url: 'https://desolate-cove-53213.herokuapp.com/api/listdegrees'
         })
         .then(function(response){
             controller.set('listdegrees', response.data);
@@ -31,7 +31,7 @@ export default Mixin.create({
         axios({
             method: "GET",
             data:{},
-            url: 'http://localhost:8080/api/listpositions'
+            url: 'https://desolate-cove-53213.herokuapp.com/api/listpositions'
         })
         .then(function(response){
             controller.set('listpositions', response.data);
@@ -74,11 +74,12 @@ export default Mixin.create({
                     company_end_date: controller.get('companyend'),
                     summary: controller.get('summary'),
                 },
-                url: 'http://localhost:8080/api/applicantdatas'
+                url: 'https://desolate-cove-53213.herokuapp.com/api/applicantdatas'
             })
             .then(function(response){
                 console.log('Add applicant success!');
                 alert("Your CV application has been sent! Please check your e-mail inbox.");
+                location.href = '/';
             })
             .catch(function(error){
                 console.log('Error ' + error);

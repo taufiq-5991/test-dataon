@@ -32,7 +32,10 @@ th {
 	color: #474747;
 }
 
-
+.input-group-num {
+	-webkit-appearance: none;
+	-moz-appearance: textfield;
+}
 
 .input-group:hover {
 	border-color: #3399FF;
